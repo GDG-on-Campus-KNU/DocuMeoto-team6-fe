@@ -26,14 +26,6 @@
 - props 타입은 컴포넌트 파일 상단에 type Props = {} 로 정의
 - default export 사용
 
-## API 연동 규칙
-- axios 인스턴스는 src/api/instance.ts 에서 관리
-- 서버 상태는 React Query로 관리
-- 에러 처리는 React Query의 onError 또는 ErrorBoundary 사용
-
-## React Query 규칙
-- query key는 src/constants/queryKeys.ts 에서 상수로 관리
-
 ## 환경변수
 - .env 파일은 git에 올리지 않음
 - 환경변수는 반드시 VITE_ 접두사 사용
@@ -42,3 +34,5 @@
 ## 금지사항
 - TypeScript any 타입 사용 금지, unknown 또는 명시적 타입 사용
 - console.log 커밋 금지 
+- 하드코딩된 URL, 숫자, 문자열 금지 → constants/로 분리\
+- 절대경로 alias는 @/ 만 사용
