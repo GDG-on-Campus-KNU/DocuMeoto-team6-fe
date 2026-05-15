@@ -16,8 +16,8 @@
 - 타입 정의는 src/types/ 에 작성
 
 ## 코드 컨벤션
-- 컴포넌트: PascalCase (예: QuestionCard.tsx)
-- 훅: camelCase, use 접두사 (예: useQuestionList.ts)
+- 컴포넌트: PascalCase 
+- 훅: camelCase, use 접두사 
 - 상수: UPPER_SNAKE_CASE
 - 타입/인터페이스: PascalCase, I 접두사 없이 사용
 
@@ -31,7 +31,14 @@
 - 서버 상태는 React Query로 관리
 - 에러 처리는 React Query의 onError 또는 ErrorBoundary 사용
 
+## React Query 규칙
+- query key는 src/constants/queryKeys.ts 에서 상수로 관리
+
 ## 환경변수
 - .env 파일은 git에 올리지 않음
 - 환경변수는 반드시 VITE_ 접두사 사용
 - .env.example 파일로 키 목록만 관리
+
+## 금지사항
+- TypeScript any 타입 사용 금지, unknown 또는 명시적 타입 사용
+- console.log 커밋 금지 
